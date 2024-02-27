@@ -39,7 +39,7 @@
 
 <body>
 	<header>
-        <div class="info_top">
+        <div class="info_top"> 
             <div class="bg_in">
                 <p class="p_infor">
                     <span><i class="fa fa-envelope-o" aria-hidden="true"></i>Email: sales@3tmobile.gmail</span>
