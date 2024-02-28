@@ -310,7 +310,7 @@
                                         </ul>
                                     </li>
 
-                                    <li class=''><a href='chitiettin.php'>Tin tức</a></li>
+                                    <li class=''><a href='<?php echo APP_URL?>tintuc'>Tin tức</a></li>
                                     <li class=''><a href='lienhe.php'>Liên hệ</a></li>
                                 </ul>
                             </div>

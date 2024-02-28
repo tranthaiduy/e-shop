@@ -113,18 +113,6 @@
                         </div>
                         <div class="clear"></div>
                      </div>
-                     <!--  <div class="conten-infor-pro">
-                        <p><img alt="phone icon thietbivanphong123.com" src="/data/upload/home-ico.png" style="height:16px; width:16px" />&nbsp;Địa chỉ : 439/4/20 KP1,Phường Tân Thới Hiệp,Quận 12,TPHCM</p>
-                        
-                        <p><img alt="phone icon thietbivanphong123.com" src="/data/upload/Phone-icon-thietbivanphong123.png" style="height:16px; width:16px" />&nbsp;0932 023 992</p>
-                        
-                        <p><img alt="person icon thietbivanphong123" src="/data/upload/person-icon.gif" style="height:16px; width:16px" />&nbsp;Mr Quang: 090 66 99 038 &nbsp; &nbsp; &nbsp; &nbsp; <img alt="person icon thietbivanphong123" src="/data/upload/person-icon.gif" style="height:16px; width:16px" />&nbsp;Mr Duy: 0938 62 69 60</p>
-                        
-                        <p><img alt="person icon thietbivanphong123" src="/data/upload/person-icon.gif" style="height:16px; width:16px" />&nbsp;Ms Huyền: 0888 039 123 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt="person icon thietbivanphong123" src="/data/upload/person-icon.gif" style="height:16px; width:16px" />&nbsp;Ms Ngọc: 090 247 0070</p>
-                        
-                        <p><img alt="clock icon thietbivanphong123.com" src="/data/upload/clock-icon.png" style="height:16px; width:16px" />&nbsp;Thời gian:Từ 8h - 17h30 thứ 2 đến thứ 6. T7&nbsp;từ 8h - 12h00</p>
-                        
-                        </div> -->
                      <div class="tags_products prodcut_detail">
                         <div class="tab_link">
                            <h3 class="title_tab_link">TAGS: </h3>
@@ -156,9 +144,9 @@
                      <div class="bx-contact">
                         <span class="title-cnt">Bạn cần hỗ trợ?</span> 
                         <p>Chat với chúng tôi :</p>
-                        <p><img alt="icon skype " src="image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
-                        <p><img alt="icon skype " src="image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
-                        <p><img alt="icon skype " src="image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                        <p><img alt="icon skype " src="<?php echo APP_URL?>public/image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                        <p><img alt="icon skype " src="<?php echo APP_URL?>public/image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
+                        <p><img alt="icon skype " src="<?php echo APP_URL?>public/image/icon skype.png" style="height:24px; width:24px" />&nbsp;<a href="skype:quangtran.123corp?chat">thietbivanphong.com</a></p>
                         
                      </div>
                   </div>
