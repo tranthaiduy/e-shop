@@ -23,7 +23,7 @@ class index extends DController{
         $this->load->view('footer');
     }
 
-    public function chitietsanpham(){
+    public function chitietsanpham($id){
         $this->load->view('header');
         $this->load->view('detailproduct');
         $this->load->view('footer');
@@ -32,6 +32,12 @@ class index extends DController{
     public function notfound(){
         $this->load->view('header');
         $this->load->view('404');
+        $this->load->view('footer');
+    }
+
+    public function lienhe(){
+        $this->load->view('header');
+        $this->load->view('contact');
         $this->load->view('footer');
     }
 

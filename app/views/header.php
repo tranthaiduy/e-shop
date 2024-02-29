@@ -32,6 +32,7 @@
     <!--tkw-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="<?php echo APP_URL?>public/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?php echo APP_URL?>public/css/font-awesome.min.css" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="<?php echo APP_URL?>public/css/style.css">
     <link rel="stylesheet" type="text/css" href="<?php echo APP_URL?>public/css/product.css">
 
@@ -52,7 +53,7 @@
                 <div class="header_top">
                     <div class="bg_in">
                         <div class="logo">
-                            <a href="."><img src="<?php echo APP_URL?>public/image/logohere.jpeg" width="250" height="100" alt="logohere.jpeg" /></a>
+                            <a href="<?php echo APP_URL?>index"><img src="<?php echo APP_URL?>public/image/logohere.jpeg" width="250" height="100" alt="logohere.jpeg" /></a>
                         </div>
                         <nav class="menu_top">
                             <form class="search_form" method="get" action="">
@@ -106,18 +107,6 @@
                                                             <li>
                                                                 <a href="sanpham.php">Iphone 11</a>
                                                             </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Iphone 11 Pro</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Iphone X</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Iphone 11</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Iphone 11 Pro</a>
-                                                            </li>
                                                             <div class="clear"></div>
                                                         </ul>
                                                         <span style="color: #000;position: relative;font-size: 17px;font-weight: 700;">Samsung</span>
@@ -128,152 +117,11 @@
                                                             <li>
                                                                 <a href="sanpham.php">Samsung A9</a>
                                                             </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A10</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A7</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A9</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A10</a>
-                                                            </li>
                                                             <div class="clear"></div>
                                                         </ul>
 
                                                     </div>
 
-                                                </li>
-                                                <li class='active has-sub'>
-                                                    <a href='sanpham.php'><span>Máy tính bảng</span></a>
-                                                    <div class="menu_sub_all">
-                                                        <span style="color: #000;position: relative;font-size: 17px;font-weight: 700;">Apple</span>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="sanpham.php">Ipad X</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Ipad 11</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Ipad 11 Pro</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Ipad X</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Ipad 11</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Ipad 11 Pro</a>
-                                                            </li>
-                                                            <div class="clear"></div>
-                                                        </ul>
-                                                        
-                                                    
-                                                    </div>
-                                                </li>
-                                                <li class='active has-sub'>
-                                                    <a href='sanpham.php'><span>Macbook mới</span></a>
-                                                    <div class="menu_sub_all">
-                                                        <span style="color: #000;position: relative;font-size: 17px;font-weight: 700;">Apple</span>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="sanpham.php">Macbook X</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Macbook 11</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Macbook 11 Pro</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Macbook X</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Macbook 11</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Macbook 11 Pro</a>
-                                                            </li>
-                                                            <div class="clear"></div>
-                                                        </ul>
-                                                        <span style="color: #000;position: relative;font-size: 17px;font-weight: 700;">Samsung</span>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="sanpham.php">Macbook A7</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Macbook A9</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Macbook A10</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Macbook A7</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Macbook A9</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Macbook A10</a>
-                                                            </li>
-                                                            <div class="clear"></div>
-                                                        </ul>
-
-                                                    </div>
-                                                </li>
-                                                <li class='active has-sub'>
-                                                    <a href='sanpham.php'><span>Macbook cũ</span></a>
-                                                    <div class="menu_sub_all">
-                                                        <span style="color: #000;position: relative;font-size: 17px;font-weight: 700;">Apple</span>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="sanpham.php">Iphone X</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Iphone 11</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Iphone 11 Pro</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Iphone X</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Iphone 11</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Iphone 11 Pro</a>
-                                                            </li>
-                                                            <div class="clear"></div>
-                                                        </ul>
-                                                        <span style="color: #000;position: relative;font-size: 17px;font-weight: 700;">Samsung</span>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A7</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A9</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A10</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A7</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A9</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A10</a>
-                                                            </li>
-                                                            <div class="clear"></div>
-                                                        </ul>
-
-                                                    </div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -284,34 +132,22 @@
                         <div class="search_top">
                             <div id='cssmenu'>
                                 <ul>
-                                    <li class='active'><a href='index.php'>Trang chủ</a></li>
+                                    <li class='active'><a href='<?php echo APP_URL?>index'>Trang chủ</a></li>
                                     <li class=''><a href='chitiettin.php'>Giới thiệu</a></li>
-                                    <li class=''><a href='chitiettin.php'>Bảo hành</a></li>
                                     <li class=''>
-
-                                        <a href='sanpham.php'>Sản phẩm</a>
-
+                                        <a href='#'>Sản phẩm</a>
                                         <ul>
-
-                                            <li><a href='sanpham.php'>Apple</a>
+                                            <li><a href='<?php echo APP_URL?>index/danhmuc'>Apple</a>
                                                 <ul>
-                                                    <li><a href='sanpham.php'>Iphone</a></li>
-                                                    <li><a href='sanpham.php'>Macbook</a></li>
+                                                    <li><a href='<?php echo APP_URL?>index/chitietsanpham/12'>Iphone</a></li>
+                                                    <li><a href='<?php echo APP_URL?>index/chitietsanpham/14'>Macbook</a></li>
                                                 </ul>
                                             </li>
-
-                                            <li><a href='sanpham.php'>Samsung</a>
-                                                <ul>
-                                                    <li><a href='sanpham.php'>Samsung A</a></li>
-                                                    <li><a href='sanpham.php'>Samsung B</a></li>
-                                                </ul>
-                                            </li>
-
                                         </ul>
                                     </li>
-
                                     <li class=''><a href='<?php echo APP_URL?>tintuc'>Tin tức</a></li>
-                                    <li class=''><a href='lienhe.php'>Liên hệ</a></li>
+                                    <li class=''><a href='<?php echo APP_URL?>giohang'>Giỏ hàng</a></li>
+                                    <li class=''><a href='<?php echo APP_URL?>index/lienhe'>Liên hệ</a></li>
                                 </ul>
                             </div>
                         </div>
