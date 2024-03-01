@@ -1,5 +1,5 @@
 <?php
-class giohang extends DController{
+class sanpham extends DController{
     
     public function __construct(){
         $data = array();
@@ -7,17 +7,17 @@ class giohang extends DController{
     }
 
     public function index(){
-        $this->giohang();
+        $this->danhmuc();
     }
 
-    public function giohang(){
+    public function danhmuc(){
         $model = $this->load->model("CategoryModel");
 
         $table = 'tbl_category_product';
         $data['category'] = $model->listcategory_home($table);
-
+        
         $this->load->view('header', $data);
-        $this->load->view('cart');
+        $this->load->view('categoryproduct');
         $this->load->view('footer');
     }
 

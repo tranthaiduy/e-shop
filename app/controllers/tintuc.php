@@ -11,7 +11,12 @@ class tintuc extends DController{
     }
 
     public function tintuc(){
-        $this->load->view('header');
+        $model = $this->load->model("CategoryModel");
+
+        $table = 'tbl_category_product';
+        $data['category'] = $model->listcategory_home($table);
+
+        $this->load->view('header', $data);
         $this->load->view('categorypost');
         $this->load->view('footer');
     }

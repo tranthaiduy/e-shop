@@ -11,32 +11,40 @@ class index extends DController{
     }
 
     public function homepage(){
-        $this->load->view('header');
+        $model = $this->load->model("CategoryModel");
+        $model_post = $this->load->model("CatePostModel");
+
+        $table = 'tbl_category_product';
+        $table_post = 'tbl_category_post';
+        $data['category'] = $model->listcategory_home($table);
+        $data['category_post'] = $model_post->listcatepost_home($table_post);
+
+        $this->load->view('header', $data);
         $this->load->view('slider');
         $this->load->view('home');
         $this->load->view('footer');
     }
 
-    public function danhmuc(){
-        $this->load->view('header');
-        $this->load->view('categoryproduct');
-        $this->load->view('footer');
-    }
 
-    public function chitietsanpham($id){
-        $this->load->view('header');
-        $this->load->view('detailproduct');
-        $this->load->view('footer');
-    }
 
     public function notfound(){
-        $this->load->view('header');
+        $model = $this->load->model("CategoryModel");
+
+        $table = 'tbl_category_product';
+        $data['category'] = $model->listcategory_home($table);
+
+        $this->load->view('header', $data);
         $this->load->view('404');
         $this->load->view('footer');
     }
 
     public function lienhe(){
-        $this->load->view('header');
+        $model = $this->load->model("CategoryModel");
+
+        $table = 'tbl_category_product';
+        $data['category'] = $model->listcategory_home($table);
+
+        $this->load->view('header', $data);
         $this->load->view('contact');
         $this->load->view('footer');
     }

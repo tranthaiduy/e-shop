@@ -25,4 +25,9 @@ class CategoryModel extends DModel{
     public function deletecategory($table, $cond){
         return $this->db->delete($table, $cond);
     }
+
+    public function listcategory_home($table){
+        $sql = "SELECT * FROM $table ORDER BY id_category_product DESC";
+        return $this->db->select($sql);
+    }
 }

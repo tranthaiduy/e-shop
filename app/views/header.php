@@ -96,9 +96,11 @@
                                     <div class="cate_pro">
                                         <div id='cssmenu_flyout' class="display_destop_menu">
                                             <ul>
+                                                <?php foreach($category as $key => $val){ ?>
                                                 <li class='active has-sub'>
-                                                    <a href='<?php echo APP_URL?>index/danhmuc'><span>Điện thoại</span></a>
-                                                    <div class="menu_sub_all">
+                                                    
+                                                    <a href='<?php echo APP_URL?>sanpham/danhmuc/<?php echo $val['id_category_product']?>'><span><?php echo $val['title_category_product']?></span></a>
+                                                    <!-- <div class="menu_sub_all">
                                                         <span style="color: #000;position: relative;font-size: 17px;font-weight: 700;">Apple</span>
                                                         <ul>
                                                             <li>
@@ -120,9 +122,10 @@
                                                             <div class="clear"></div>
                                                         </ul>
 
-                                                    </div>
-
+                                                    </div> -->
+                                                    
                                                 </li>
+                                                <?php } ?>
                                             </ul>
                                         </div>
                                     </div>
@@ -137,15 +140,24 @@
                                     <li class=''>
                                         <a href='#'>Sản phẩm</a>
                                         <ul>
-                                            <li><a href='<?php echo APP_URL?>index/danhmuc'>Apple</a>
+                                            <?php foreach($category_post as $key => $val){?>
+                                            <li><a href='<?php echo APP_URL?>sanpham/danhmuc/<?php echo $val['id_category_post']?>'><?php echo $val['title_category_post']?></a>
                                                 <ul>
                                                     <li><a href='<?php echo APP_URL?>index/chitietsanpham/12'>Iphone</a></li>
                                                     <li><a href='<?php echo APP_URL?>index/chitietsanpham/14'>Macbook</a></li>
                                                 </ul>
                                             </li>
+                                            <?php }?>
                                         </ul>
                                     </li>
-                                    <li class=''><a href='<?php echo APP_URL?>tintuc'>Tin tức</a></li>
+                                    <li class=''>
+                                        <a href='<?php echo APP_URL?>tintuc'>Tin tức</a>
+                                        <ul>
+                                            <?php foreach($category_post as $key => $val){?>
+                                            <li><a href=''><?php echo $val['title_category_post']?></a></li>
+                                            <?php }?>
+                                        </ul>
+                                    </li>
                                     <li class=''><a href='<?php echo APP_URL?>giohang'>Giỏ hàng</a></li>
                                     <li class=''><a href='<?php echo APP_URL?>index/lienhe'>Liên hệ</a></li>
                                 </ul>

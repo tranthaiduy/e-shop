@@ -25,4 +25,9 @@ class CatePostModel extends DModel{
     public function deletecatepost($table, $cond){
         return $this->db->delete($table, $cond);
     }
+
+    public function listcatepost_home($table){
+        $sql = "SELECT * FROM $table ORDER BY id_category_post DESC";
+        return $this->db->select($sql);
+    }
 }
