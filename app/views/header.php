@@ -140,21 +140,26 @@
                                     <li class=''>
                                         <a href='#'>Sản phẩm</a>
                                         <ul>
-                                            <?php foreach($category_post as $key => $val){?>
-                                            <li><a href='<?php echo APP_URL?>sanpham/danhmuc/<?php echo $val['id_category_post']?>'><?php echo $val['title_category_post']?></a>
+                                            <?php foreach($category as $key => $val){?>
+                                            <li><a href='<?php echo APP_URL?>sanpham/danhmuc/<?php echo $val['id_category_product']?>'><?php echo $val['title_category_product']?></a>
                                                 <ul>
-                                                    <li><a href='<?php echo APP_URL?>index/chitietsanpham/12'>Iphone</a></li>
-                                                    <li><a href='<?php echo APP_URL?>index/chitietsanpham/14'>Macbook</a></li>
+                                                    <!-- <li><a href=''>Iphone</a></li>
+                                                    <li><a href=''>Macbook</a></li> -->
                                                 </ul>
                                             </li>
                                             <?php }?>
                                         </ul>
                                     </li>
                                     <li class=''>
-                                        <a href='<?php echo APP_URL?>tintuc'>Tin tức</a>
+                                        <a href='#'>Tin tức</a>
                                         <ul>
                                             <?php foreach($category_post as $key => $val){?>
-                                            <li><a href=''><?php echo $val['title_category_post']?></a></li>
+                                            <li>
+                                                <a href='<?php echo APP_URL?>tintuc/danhmuc/<?php echo $val['id_category_post']?>'><?php echo $val['title_category_post']?></a>
+                                                <ul>
+
+                                                </ul>
+                                            </li>
                                             <?php }?>
                                         </ul>
                                     </li>

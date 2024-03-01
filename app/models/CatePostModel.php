@@ -30,4 +30,12 @@ class CatePostModel extends DModel{
         $sql = "SELECT * FROM $table ORDER BY id_category_post DESC";
         return $this->db->select($sql);
     }
+
+    public function postbyid_home($table_catepost, $table_post, $id){
+        $sql = "SELECT * FROM $table_catepost,$table_post 
+                WHERE $table_catepost.id_category_post=$table_post.id_category_post
+                AND $table_post.id_category_post='$id'
+                ORDER BY $table_post.id_post DESC";
+        return $this->db->select($sql);
+    }
 }

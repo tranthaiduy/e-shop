@@ -30,4 +30,12 @@ class CategoryModel extends DModel{
         $sql = "SELECT * FROM $table ORDER BY id_category_product DESC";
         return $this->db->select($sql);
     }
+
+    public function categorybyid_home($table_category, $table_product, $id){
+        $sql = "SELECT * FROM $table_category,$table_product 
+                WHERE $table_category.id_category_product=$table_product.id_category_product
+                AND $table_product.id_category_product='$id'
+                ORDER BY $table_product.id_product DESC";
+        return $this->db->select($sql);
+    }
 }

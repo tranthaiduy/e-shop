@@ -29,9 +29,12 @@ class index extends DController{
 
     public function notfound(){
         $model = $this->load->model("CategoryModel");
+        $model_post = $this->load->model("CatePostModel");
 
         $table = 'tbl_category_product';
+        $table_post = 'tbl_category_post';
         $data['category'] = $model->listcategory_home($table);
+        $data['category_post'] = $model_post->listcatepost_home($table_post);
 
         $this->load->view('header', $data);
         $this->load->view('404');
@@ -40,9 +43,12 @@ class index extends DController{
 
     public function lienhe(){
         $model = $this->load->model("CategoryModel");
+        $model_post = $this->load->model("CatePostModel");
 
         $table = 'tbl_category_product';
+        $table_post = 'tbl_category_post';
         $data['category'] = $model->listcategory_home($table);
+        $data['category_post'] = $model_post->listcatepost_home($table_post);
 
         $this->load->view('header', $data);
         $this->load->view('contact');
