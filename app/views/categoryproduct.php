@@ -1,39 +1,24 @@
     <section>
 
         <div class="bg_in">
-            <div class="breadcrumbs">
-
-                    <!-- <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-
-                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-
-                           <a itemprop="item" href=".">
-
-                           <span itemprop="name">Trang chủ</span></a>
-
-                           <meta itemprop="position" content="1" />
-
-                        </li>
-
-                        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-
-                           <a itemprop="item" href="sanpham.php">
-
-                           <span itemprop="name">Iphone</span></a>
-
-                           <meta itemprop="position" content="2" />
-
-                        </li>
-
-                       
-                    </ol> -->
-
-            </div>
             <div class="module_pro_all">
                 <div class="box-title">
                     <div class="title-bar">
-                        <h1>Danh mục : IPHONE</h1>
-                        <a class="read_more" href="sanpham.php">
+                    <?php
+                        $hasCategory = false;
+
+                        foreach($category_by_id as $key => $val){
+                            $name = $val['title_category_product'];
+                            $hasCategory = true;
+                        }
+                    ?>
+                        <h1>
+                        <?php
+                            echo $name;
+                        ?>
+                        </h1>
+
+                        <a class="read_more" href="">
                         Xem thêm
                         </a>
                     </div>
@@ -46,7 +31,7 @@
                                 <div class="content">
                                 <div class="img-right-pro">
                                 
-                                <a href="sanpham.php">
+                                <a href="">
                                 <img class="lazy img-pro content-image" src="<?php echo APP_URL?>public/uploads/product/<?php echo $val['image_product']?>" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
                                 </a>
 
@@ -57,7 +42,7 @@
                                 </div>
                                 </div>
                                 <div class="name-pro-right">
-                                <a href="chitietsp.php">
+                                <a href="<?php echo APP_URL?>sanpham/chitietsanpham/<?php echo $val['id_product']?>">
                                     <h3><?php echo $val['title_product']?></h3>
                                 </a>
                                 </div>

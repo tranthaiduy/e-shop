@@ -1,8 +1,11 @@
+<?php foreach($detail_product as $key => $val){
+   $name = $val['title_product'];
+?>
 <section>
    <div class="bg_in">
       <div class="wrapper_all_main">
          <div class="wrapper_all_main_right no-padding-left" style="width:100%;">
-            <div class="breadcrumbs">
+            <!-- <div class="breadcrumbs">
                <ol itemscope itemtype="http://schema.org/BreadcrumbList">
                   <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                      <a itemprop="item" href=".">
@@ -23,11 +26,12 @@
                      <meta itemprop="position" content="3" />
                   </li>
                </ol>
-            </div>
+            </div> -->
             <div class="content_page">
                <div class="content-right-items margin0">
                   <div class="title-pro-des-ct">
-                     <h1>Iphone 6</h1>
+                     
+                     <h1><?php echo $name?></h1>
                   </div>
                   <div class="slider-galery ">
                      <div id="sync1" class="owl-carousel owl-theme">
@@ -70,7 +74,7 @@
                               <div class="status_pro"><span><b>Xuất xứ:</b>  Việt Nam</span></div>
                            </div>
                            <div class="color_price">
-                              <span class="title_price bg_green">Giá bán</span> 17,960,000 <span>vnđ</span>. (GIÁ CHƯA VAT)
+                              <span class="title_price bg_green">Giá bán</span> <?php echo number_format($val['price_product'])?> <span>vnđ</span>. (GIÁ CHƯA VAT)
                               <div class="clear"></div>
                            </div>
                            <div class="color_price">
@@ -424,3 +428,4 @@
       
    </script>
 </section>
+<?php }?>

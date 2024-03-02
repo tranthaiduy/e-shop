@@ -4,7 +4,12 @@
             <div class="content_page">
                 <div class="box-title">
                     <div class="title-bar">
-                        <h1>Tin tức</h1>
+                        <?php 
+                        foreach($post_by_id as $key => $val){
+                            $name = $val['title_category_post'];
+                        }
+                        ?>
+                        <h1><?php echo $name?></h1>
                     </div>
                 </div>
                 <div class="content_text">

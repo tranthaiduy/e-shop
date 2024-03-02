@@ -32,4 +32,9 @@ class ProductModel extends DModel{
                 ORDER BY $table_product.id_product DESC";
         return $this->db->select($sql);
     }
+
+    public function detailproduct_home($table_product, $table_category, $cond){
+        $sql = "SELECT * FROM $table_product, $table_category WHERE $cond";
+        return $this->db->select($sql);
+    }
 }
