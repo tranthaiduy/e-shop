@@ -138,7 +138,7 @@
                                     <li class='active'><a href='<?php echo APP_URL?>index'>Trang chủ</a></li>
                                     <li class=''><a href='chitiettin.php'>Giới thiệu</a></li>
                                     <li class=''>
-                                        <a href='#'>Sản phẩm</a>
+                                        <a href='<?php echo APP_URL?>sanpham/tatca'>Sản phẩm</a>
                                         <ul>
                                             <?php foreach($category as $key => $val){?>
                                             <li><a href='<?php echo APP_URL?>sanpham/danhmuc/<?php echo $val['id_category_product']?>'><?php echo $val['title_category_product']?></a>
@@ -151,7 +151,7 @@
                                         </ul>
                                     </li>
                                     <li class=''>
-                                        <a href='#'>Tin tức</a>
+                                        <a href='<?php echo APP_URL?>tintuc/tatca'>Tin tức</a>
                                         <ul>
                                             <?php foreach($category_post as $key => $val){?>
                                             <li>

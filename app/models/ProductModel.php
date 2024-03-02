@@ -26,4 +26,10 @@ class ProductModel extends DModel{
     public function deleteproduct($table, $cond){
         return $this->db->delete($table, $cond);
     }
+
+    public function listproduct_home($table_product){
+        $sql = "SELECT * FROM $table_product   
+                ORDER BY $table_product.id_product DESC";
+        return $this->db->select($sql);
+    }
 }

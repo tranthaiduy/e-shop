@@ -26,4 +26,10 @@ class PostModel extends DModel{
     public function deletepost($table, $cond){
         return $this->db->delete($table, $cond);
     }
+
+    public function listpost_home($table_post){
+        $sql = "SELECT * FROM $table_post   
+                ORDER BY $table_post.id_post DESC";
+        return $this->db->select($sql);
+    }
 }

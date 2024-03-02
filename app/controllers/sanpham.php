@@ -27,6 +27,24 @@ class sanpham extends DController{
         $this->load->view('footer');
     }
 
+    public function tatca(){
+        $model_category = $this->load->model("CategoryModel");
+        $model_post = $this->load->model("CatePostModel");
+        $model_product = $this->load->model("ProductModel");
+
+        $table_category = 'tbl_category_product';
+        $table_post = 'tbl_category_post';
+        $table_product = 'tbl_product';
+
+        $data['category'] = $model_category->listcategory_home($table_category);
+        $data['category_post'] = $model_post->listcatepost_home($table_post);
+        $data['list_product'] = $model_product->listproduct_home($table_product);
+        
+        $this->load->view('header', $data);
+        $this->load->view('listproduct', $data);
+        $this->load->view('footer');
+    }
+
     public function chitiettin($id){
         $this->load->view('header');
         $this->load->view('detailpost');
