@@ -60,6 +60,7 @@ class sanpham extends DController{
         $data['category'] = $model_category->listcategory_home($table_category);
         $data['category_post'] = $model_post->listcatepost_home($table_post);
         $data['detail_product'] = $model_product->detailproduct_home($table_product, $table_category, $cond);
+        
         $this->load->view('header', $data);
         $this->load->view('detailproduct', $data);
         $this->load->view('footer');
