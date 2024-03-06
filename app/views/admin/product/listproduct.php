@@ -9,6 +9,7 @@
                 <th scope="col">Giá (VND)</th>
                 <th scope="col">Số lượng</th>
                 <th scope="col">Danh mục</th>
+                <th scope="col">Sản phẩm hot</th>
                 <th scope="col">Hành động</th>
             </tr>
         </thead>
@@ -26,6 +27,15 @@
                 <td><?php echo number_format($val['price_product'], 0);?></td>
                 <td><?php echo $val['quantity_product'];?></td>
                 <td><?php echo $val['title_category_product'];?></td>
+                <td>
+                    <?php 
+                    if($val['product_hot']==1){
+                        echo 'Có';
+                    }else{
+                        echo 'Không';
+                    }
+                    ?>
+                </td>
                 <td>
                     <a href="<?php echo APP_URL?>product/editproduct/<?php echo $val['id_product']?>">
                         <button class="btn btn-warning">Sửa</button>

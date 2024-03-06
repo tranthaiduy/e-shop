@@ -38,6 +38,25 @@
                 ?>
             </select>
         </div>
+        <div class="form-group">
+            <label style="font-size: 25px;">Sản phẩm hot:</label>
+            <select type="text" name="product_hot" class="form-control">
+                <option>---Chọn---</option>
+                <?php 
+                if($val['product_hot']==0){
+                ?>
+                <option selected value="0">Không</option>
+                <option value="1">Có</option>
+                <?php
+                }else{
+                ?>
+                <option value="0">Không</option>
+                <option selected value="1">Có</option> 
+                <?php   
+                }
+                ?>
+            </select>
+        </div>
         <button type="submit" class="btn btn-default btn-primary">Lưu</button>
     </form>
     <?php 

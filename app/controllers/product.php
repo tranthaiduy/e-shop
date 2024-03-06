@@ -49,6 +49,7 @@ class product extends DController{
         $title = $_POST['title_product'];
         $price = $_POST['price_product'];
         $desc = $_POST['desc_product'];
+        $hot = $_POST['product_hot'];
         $quantity = $_POST['quantity_product'];
         $category = $_POST['category_product'];
 
@@ -74,6 +75,7 @@ class product extends DController{
             'image_product' => $image,
             'price_product' => $price,
             'desc_product' => $desc,
+            'product_hot' => $hot,
             'quantity_product' => $quantity,
             'id_category_product' => $category
         );
@@ -115,6 +117,7 @@ class product extends DController{
         $title = $_POST['title_product'];
         $price = $_POST['price_product'];
         $desc = $_POST['desc_product'];
+        $hot = $_POST['product_hot'];
         $quantity = $_POST['quantity_product'];
         $category = $_POST['category_product'];
 
@@ -145,6 +148,7 @@ class product extends DController{
                 'image_product' => $image,
                 'price_product' => $price,
                 'desc_product' => $desc,
+                'product_hot' => $hot,
                 'quantity_product' => $quantity,
                 'id_category_product' => $category
             );
@@ -152,9 +156,9 @@ class product extends DController{
         }else{
             $data = array(
                 'title_product' => $title,
-                // 'image_product' => $image,
                 'price_product' => $price,
                 'desc_product' => $desc,
+                'product_hot' => $hot,
                 'quantity_product' => $quantity,
                 'id_category_product' => $category
             );
@@ -164,7 +168,6 @@ class product extends DController{
 
         $result = $model->updateproduct($table, $data, $cond);
         if($result==1){
-            
             header('Location:'.APP_URL."product/productList");
         }else{
             header('Location:'.APP_URL."product/productList");
