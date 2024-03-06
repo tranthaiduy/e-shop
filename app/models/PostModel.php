@@ -32,4 +32,14 @@ class PostModel extends DModel{
                 ORDER BY $table_post.id_post DESC";
         return $this->db->select($sql);
     }
+
+    public function detailpost_home($table_post, $table_catepost, $cond){
+        $sql = "SELECT * FROM $table_post, $table_catepost WHERE $cond";
+        return $this->db->select($sql);
+    }
+
+    public function related_post_home($table_catepost, $table_post, $cond_related){
+        $sql = "SELECT * FROM $table_catepost, $table_post WHERE $cond_related";
+        return $this->db->select($sql);
+    }
 }

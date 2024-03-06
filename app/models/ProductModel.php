@@ -37,4 +37,9 @@ class ProductModel extends DModel{
         $sql = "SELECT * FROM $table_product, $table_category WHERE $cond";
         return $this->db->select($sql);
     }
+
+    public function related_product_home($table_category, $table_product, $cond_related){
+        $sql = "SELECT * FROM $table_product, $table_category WHERE $cond_related";
+        return $this->db->select($sql);
+    }
 }

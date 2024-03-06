@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="cleartype" content="on" />
-    <link rel="icon" href="template/Default/img/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="" type="image/x-icon" />
     <meta name="Description" content="" />
     <meta name="Keywords" content="" />
     <!--rieng-->
@@ -53,7 +53,7 @@
                 <div class="header_top">
                     <div class="bg_in">
                         <div class="logo">
-                            <a href="<?php echo APP_URL?>index"><img src="<?php echo APP_URL?>public/image/logohere.jpeg" width="250" height="100" alt="logohere.jpeg" /></a>
+                            <a href="<?php echo APP_URL?>index"><img src="<?php echo APP_URL?>public/image/logohere.jpeg" width="150" height="30" alt="logohere.jpeg" /></a>
                         </div>
                         <nav class="menu_top">
                             <form class="search_form" method="get" action="">
@@ -68,14 +68,14 @@
                                 <div class="hot_line_top">
                                     <span><b>Trụ sở chính</b></span>
                                     <br/>
-                                    <span class="red">Nguyễn văn Luông</span>
+                                    <span class="red">Phạm Văn Đồng</span>
                                 </div>
                             </div>
                             <div class="cols_50">
                                 <div class="hot_line_top">
                                     <span><b>Văn phòng chi nhánh</b></span>
                                     <br/>
-                                    <span class="red">Nguyễn văn Luông</span>
+                                    <span class="red">Phạm Văn Đồng</span>
                                 </div>
                             </div>
                             <div class="clear"></div>
@@ -98,32 +98,7 @@
                                             <ul>
                                                 <?php foreach($category as $key => $val){ ?>
                                                 <li class='active has-sub'>
-                                                    
                                                     <a href='<?php echo APP_URL?>sanpham/danhmuc/<?php echo $val['id_category_product']?>'><span><?php echo $val['title_category_product']?></span></a>
-                                                    <!-- <div class="menu_sub_all">
-                                                        <span style="color: #000;position: relative;font-size: 17px;font-weight: 700;">Apple</span>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="">Iphone X</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Iphone 11</a>
-                                                            </li>
-                                                            <div class="clear"></div>
-                                                        </ul>
-                                                        <span style="color: #000;position: relative;font-size: 17px;font-weight: 700;">Samsung</span>
-                                                        <ul>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A7</a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="sanpham.php">Samsung A9</a>
-                                                            </li>
-                                                            <div class="clear"></div>
-                                                        </ul>
-
-                                                    </div> -->
-                                                    
                                                 </li>
                                                 <?php } ?>
                                             </ul>
@@ -143,8 +118,7 @@
                                             <?php foreach($category as $key => $val){?>
                                             <li><a href='<?php echo APP_URL?>sanpham/danhmuc/<?php echo $val['id_category_product']?>'><?php echo $val['title_category_product']?></a>
                                                 <ul>
-                                                    <!-- <li><a href=''>Iphone</a></li>
-                                                    <li><a href=''>Macbook</a></li> -->
+                                                    
                                                 </ul>
                                             </li>
                                             <?php }?>

@@ -35,30 +35,30 @@
                   </div>
                   <div class="slider-galery ">
                      <div id="sync1" class="owl-carousel owl-theme">
-                           <div class="item">
-                              <img src="<?php echo APP_URL?>public/image/iphone.png" width="100%">
-                           </div>
-                           <div class="item">
-                              <img src="<?php echo APP_URL?>public/image/iphone1.jpg" width="100%">
-                           </div>
-                           <div class="item">
-                              <img src="<?php echo APP_URL?>public/image/iphonex.png" width="100%">
-                           </div>
-                           </div>
+                        <div class="item">
+                           <img src="<?php echo APP_URL?>public/uploads/product/<?php echo $val['image_product']?>" width="100%">
+                        </div>
+                        <!-- <div class="item">
+                           <img src="" width="100%">
+                        </div>
+                        <div class="item">
+                           <img src="" width="100%">
+                        </div> -->
+                     </div>
 
-                           <div id="sync2" class="owl-carousel owl-theme">
-                              <div class="item">
-                              <img src="<?php echo APP_URL?>public/image/iphone.png" width="100%">
-                           </div>
-                           <div class="item">
-                              <img src="<?php echo APP_URL?>public/image/iphone1.jpg" width="100%">
-                           </div>
-                        
-                           <div class="item">
-                              <img src="<?php echo APP_URL?>public/image/iphonex.png" width="100%">
-                           </div>
+                     <div id="sync2" class="owl-carousel owl-theme">
+                        <div class="item">
+                           <img src="<?php echo APP_URL?>public/uploads/product/<?php echo $val['image_product']?>" width="100%">
+                        </div>
+                        <!-- <div class="item">
+                           <img src="" width="100%">
+                        </div>
+                     
+                        <div class="item">
+                           <img src="" width="100%">
+                        </div> -->
                            
-                           </div> 
+                     </div> 
                      
                   </div>
                   <div class="content-des-pro">
@@ -218,28 +218,24 @@
                </div>
                <div class="pro_all_gird">
                   <div class="girds_all list_all_other_page ">
+                     <?php foreach($related as $key => $val_related){?>
                      <div class="grids">
                         <div class="grids_in">
                            <div class="content">
                               <div class="img-right-pro">
                                  <a href="sanpham.php">
-                                    <img class="lazy img-pro content-image" src="<?php echo APP_URL?>public/image/iphone.png" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
+                                    <img class="lazy img-pro content-image" src="<?php echo APP_URL?>public/uploads/product/<?php echo $val_related['image_product']?>" data-original="image/iphone.png" alt="Máy in Canon MF229DW" />
                                  </a>
                                  <div class="content-overlay"></div>
                                  <div class="content-details fadeIn-top">
                                     <ul class="details-product-overlay">
-                                       <li>Màn hình : Super Amoled 4.5k</li>
-                                       <li>Độ phân giải : 2K+(1440x3040)</li>
-                                       <li>Ram : 8GB</li>
-                                       <li>CPU : Android 9.0</li>
-                                       <li>GPU : Mali-G76 MP12</li>
-                                       <li>SSD : 512MB</li>
+                                       <?php echo $val_related['desc_product']?>
                                     </ul>
                                  </div>
                               </div>
                               <div iv class="name-pro-right">
-                                 <a href="chitietsp.php">
-                                    <h3>Iphone X 64GB</h3>
+                                 <a href="<?php echo APP_URL?>sanpham/chitietsanpham/<?php echo $val_related['id_product']?>">
+                                    <h3><?php echo $val_related['title_product']?></h3>
                                  </a>
                               </div>
                               <div class="add_card">
@@ -249,12 +245,13 @@
                               </div>
                               <div class="price_old_new">
                                  <div class="price">
-                                    <span class="news_price">17.800.000đ </span>
+                                    <span class="news_price"><?php echo number_format($val_related['price_product'])?>đ </span>
                                  </div>
                               </div>
                            </div>
                         </div>
                      </div>
+                     <?php }?>
                      <div class="clear"></div>
                   </div>
                   <div class="clear"></div>
