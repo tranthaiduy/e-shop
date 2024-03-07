@@ -3,28 +3,12 @@
             <div class="module_pro_all">
                 <div class="box-title">
                     <div class="title-bar">
-                    <?php
-                        $hasCategory = false;
-
-                        foreach($category_by_id as $key => $val){
-                            $name = $val['title_category_product'];
-                            $hasCategory = true;
-                        }
-                    ?>
-                        <h1>
-                        <?php
-                            echo $name;
-                        ?>
-                        </h1>
-
-                        <a class="read_more" href="">
-                        Xem thêm
-                        </a>
+                        <h1>Sản phẩm HOT</h1>
                     </div>
                 </div>
                 <div class="pro_all_gird">
                     <div class="girds_all list_all_other_page ">
-                        <?php foreach($category_by_id as $key => $val){ ?>
+                        <?php foreach($product_hot as $key => $val){ ?>
                         <div class="grids">
                             <div class="grids_in">
                                 <div class="content">

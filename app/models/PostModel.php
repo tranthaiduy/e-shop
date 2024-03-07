@@ -42,4 +42,9 @@ class PostModel extends DModel{
         $sql = "SELECT * FROM $table_catepost, $table_post WHERE $cond_related";
         return $this->db->select($sql);
     }
+
+    public function listpost_index_home($table_post){
+        $sql = "SELECT * FROM $table_post ORDER BY id_post DESC LIMIT 5";
+        return $this->db->select($sql);
+    }
 }

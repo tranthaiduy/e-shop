@@ -42,4 +42,9 @@ class ProductModel extends DModel{
         $sql = "SELECT * FROM $table_product, $table_category WHERE $cond_related";
         return $this->db->select($sql);
     }
+
+    public function product_hot_home($table_product){
+        $sql = "SELECT * FROM $table_product WHERE product_hot=1 ORDER BY id_product DESC";
+        return $this->db->select($sql);
+    }
 }

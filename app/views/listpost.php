@@ -2,36 +2,24 @@
     <div class="bg_in">
         <div class="content_page cart_page">
             <div class="breadcrumbs">
-
                 <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-
                     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-
-                    <a itemprop="item" href=".">
-
-                    <span itemprop="name">Trang chủ</span></a>
-
-                    <meta itemprop="position" content="1" />
-
+                        <a itemprop="item" href="<?php echo APP_URL?>index">
+                            <span itemprop="name">Trang chủ</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
                     </li>
-
                     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-
-                    <a itemprop="item" href="sanpham.php">
-
-                    <span itemprop="name">
-                        <strong itemprop="name">
-                        Tất cả tin tức
-                        </strong>
-                    </span></a>
-
-                    <meta itemprop="position" content="2" />
-
+                        <a itemprop="item" href="#">
+                            <span itemprop="name">
+                                <strong itemprop="name">
+                                Tất cả tin tức
+                                </strong>
+                            </span>
+                        </a>
+                        <meta itemprop="position" content="2" />
                     </li>
-
-                
                 </ol>
-
             </div>
             <div class="wrapper_all_main">
                 <div class="content_page">
