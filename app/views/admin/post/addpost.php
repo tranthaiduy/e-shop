@@ -1,4 +1,4 @@
-<h3 style="text-align: center;">Thêm bài viết</h3>
+<h3 style="text-align: center; color: red; font-weight: bold;">Thêm bài viết</h3>
 <div class="col-md-12">
     <form action="<?php echo APP_URL?>post/insertPost" method="post" enctype="multipart/form-data">
         <div class="form-group">
@@ -11,7 +11,7 @@
         </div>
         <div class="form-group">
             <label style="font-size: 25px;">Chi tiết bài viết:</label>
-            <textarea name="content_post" style="resize: none;" class="form-control" rows="5"></textarea>
+            <textarea id="editor" name="content_post" class="form-control"></textarea>
         </div>
         <div class="form-group">
             <label style="font-size: 25px;">Danh mục bài viết:</label>
@@ -26,6 +26,6 @@
                 ?>
             </select>
         </div>
-        <button type="submit" class="btn btn-default btn-primary">Thêm</button>
+        <button type="submit" class="btn btn-default btn-primary"><i class="fa-solid fa-plus"></i> Thêm</button>
     </form>
 </div>

@@ -3,28 +3,30 @@
         <div class="content_page cart_page">
             <div class="breadcrumbs">
                 <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-                <li itemprop="itemListElement" itemscope
-                    itemtype="http://schema.org/ListItem">
-                    <a itemprop="item" href=".">
-                    <span itemprop="name">Trang chủ</span></a>
-                    <meta itemprop="position" content="1" />
-                </li>
-                <li itemprop="itemListElement" itemscope
-                    itemtype="http://schema.org/ListItem">
-                    <span itemprop="item">
-                    <strong itemprop="name">
-                    Giỏ hàng
-                    </strong>
-                    </span>
-                    <meta itemprop="position" content="2" />
-                </li>
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="http://schema.org/ListItem">
+                        <a itemprop="item" href="<?php echo APP_URL?>index">
+                            <span itemprop="name">Trang chủ</span>
+                        </a>
+                        <meta itemprop="position" content="1" />
+                    </li>
+                    <li itemprop="itemListElement" itemscope
+                        itemtype="http://schema.org/ListItem">
+                        <span itemprop="item">
+                            <strong itemprop="name">
+                            Giỏ hàng
+                            </strong>
+                        </span>
+                        <meta itemprop="position" content="2" />
+                    </li>
                 </ol>
             </div>
             <div class="box-title">
                 <div class="title-bar">
-                <h1>Giỏ hàng của bạn</h1>
+                    <h1>Giỏ hàng của bạn</h1>
                 </div>
             </div>
+            
             <div class="content_text">
                 <div class="container_table">
                 <table class="table table-hover table-condensed">
@@ -32,7 +34,6 @@
                         <tr class="tr tr_first">
                             <th >Hình ảnh</th>
                             <th>Tên sản phẩm</th>
-                            <th>Mã sản phẩm</th>
                             <th >Giá</th>
                             <th style="width:100px;">Số lượng</th>
                             <th>Thành tiền</th>
@@ -40,52 +41,66 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <form action='./gio-hang/' method="post">
+                        <?php
+                            if(isset($_SESSION["shopping_cart"])){
+                        ?>
+                        <form action="<?php echo APP_URL?>giohang/updategiohang" method="post">
+                            <?php 
+                            
+                                $total = 0;
+                                foreach($_SESSION["shopping_cart"] as $key => $value){
+                                    $subtotal = $value['product_quantity']*$value['product_price'];
+                                    $total += $subtotal;
+                            ?>
                             <tr class="tr">
-                            <td data-th="Hình ảnh">
-                                <div class="col_table_image col_table_hidden-xs"><img src="<?php echo APP_URL?>public/image/iphone1.jpg" alt="Máy in laser Canon LBP251DW" class="img-responsive"/></div>
-                            </td>
-                            <td data-th="Sản phẩm">
-                                <div class="col_table_name">
-                                    <h4 class="nomargin">Iphone 1</h4>
-                                </div>
-                            </td>
-                            <td data-th="Mã sản phẩm">
-                                <div class="col_table_name">
-                                    <h4 class="nomargin">Iphone 1</h4>
-                                </div>
-                            </td>
-                            <td data-th="Giá"><span class="color_red font_money">0</span></td>
-                            <td data-th="Số lượng">
-                                <div class="clear margintop5">
-                                    <div class="floatleft"><input type="number" class="inputsoluong" name="qty[576]"  value="1"></div>
-                                    <input type="hidden" name="check" value="999">
-                                    <div class="floatleft width50">
-                                        <button class="btn_df btn_table_td_rf_del btn-sm">
-                                        <i class="fa fa-refresh"></i></button>
+                                <td data-th="Hình ảnh">
+                                    <div class="col_table_image col_table_hidden-xs"><img src="<?php echo APP_URL?>public/uploads/product/<?php echo $value['product_image']?>" alt="<?php echo $value['product_title']?>" class="img-responsive"/></div>
+                                </td>
+                                <td data-th="Sản phẩm">
+                                    <div class="col_table_name">
+                                        <h4 class="nomargin"><?php echo $value['product_title']?></h4>
                                     </div>
-                                </div>
-                                <div class="clear"></div>
-                            </td>
-                            <td data-th="Thành tiền" class="text_center"><span class="color_red font_money">0 đ</span></td>
-                            <td class="actions aligncenter" data-th="">
-                                <a onclick="return del(576,'Máy in laser Canon LBP251DW');" class="btn_df btn_table_td_rf_del btn-sm"><i class="fa fa-trash-o"></i> <span class="display_mobile">Xóa sản phẩm</span></a>                          
-                            </td>
+                                </td>
+                                <td data-th="Giá"><span class="color_red font_money"><?php echo number_format($value['product_price'])?>đ</span></td>
+                                <td data-th="Số lượng">
+                                    <div class="clear margintop5">
+                                        <div class="text_center">
+                                            <input type="number" min="1" class="inputsoluong" name="qty[<?php echo $value['product_id']?>]"  value="<?php echo $value['product_quantity']?>">
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </td>
+                                <td class="text_center">
+                                    <span class="color_red font_money"><?php echo number_format($subtotal)?>đ</span>
+                                </td>
+                                <td class="actions aligncenter">
+                                    <button type="submit" style="box-shadow: none;margin: 5px 0px; padding: 2px 23px;" value="<?php echo $value['product_id']?>" name="delete_cart" class="btn btn-sm btn-danger">Xóa</button>                             
+                                    <button type="submit" style="box-shadow: none;margin: 5px 0px" value="" name="update_cart" class="btn btn-sm btn-warning">Cập nhật</button>                                
+                                </td>
                             </tr>
+                            <?php
+                                }
+                            
+                            ?>
                         </form>
                         <tr>
                             <td colspan="7" class="textright_text">
                             <div class="sum_price_all">
-                                <span class="text_price">Tổng tiền thành toán</span>: 
-                                <span class="text_price color_red">0 đ</span>
+                                <span class="text_price">Tổng tiền thanh toán</span>: 
+                                <span class="text_price color_red"><?php echo number_format($total)?> vnđ</span>
                             </div>
                             </td>
                         </tr>
+                        <?php
+                            }
+                        ?>
                     </tbody>
                     <tfoot>
                         <tr class="tr_last">
                             <td colspan="7">
-                            <a href="." class="btn_df btn_table floatleft"><i class="fa fa-long-arrow-left"></i> Tiếp tục mua hàng</a>
+                            <a href="<?php echo APP_URL?>" class="btn_df btn_table floatleft">
+                                <i class="fa fa-long-arrow-left"></i> Tiếp tục mua hàng
+                            </a>
                             <div class="clear"></div>
                             </td>
                         </tr>
@@ -118,58 +133,58 @@
                 <div class="contact_right">
                     <div class="form_contact_in">
                         <div class="box_contact">
-                            <form name="FormDatHang" method="post" action="gio-hang/" >
-                            <div class="content-box_contact">
-                                <div class="row">
-                                    <div class="input">
-                                        <label>Họ và tên: <span style="color:red;">*</span></label>
-                                        <input type="text" name="txtHoTen" required class="clsip">
+                            <form name="FormDatHang" method="post" action="<?php echo APP_URL?>giohang/dathang" autocomplete="off">
+                                <div class="content-box_contact">
+                                    <div class="row">
+                                        <div class="input">
+                                            <label>Họ và tên: <span style="color:red;">*</span></label>
+                                            <input type="text" name="name" required class="clsip">
+                                        </div>
+                                        <div class="clear"></div>
                                     </div>
+                                    <!---row---->
+                                    <div class="row">
+                                        <div class="input">
+                                            <label>Số điện thoại: <span style="color:red;">*</span></label>
+                                            <input type="text" name="phone" required onkeydown="return checkIt(event)" class="clsip">
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!---row---->
+                                    <div class="row">
+                                        <div class="input">
+                                            <label>Địa chỉ: <span style="color:red;">*</span></label>
+                                            <input type="text" name="address" required class="clsip" >
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!---row---->
+                                    <div class="row">
+                                        <div class="input">
+                                            <label>Email: <span style="color:red;">*</span></label>
+                                            <input type="text" name="email" onchange="return KiemTraEmail(this);" required class="clsip">
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!---row---->
+                                    <div class="row">
+                                        <div class="input">
+                                            <label>Nội dung: <span style="color:red;">*</span></label>
+                                            <textarea type="text" name="content" class="clsipa"></textarea>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!---row---->
+                                    <div class="row btnclass">
+                                        <div class="input ipmaxn ">
+                                            <input type="submit" class="btn-gui" name="frmSubmit" id="frmSubmit" value="Gửi đơn hàng">
+                                            <input type="reset" class="btn-gui" value="Nhập lại">
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <!---row---->
                                     <div class="clear"></div>
                                 </div>
-                                <!---row---->
-                                <div class="row">
-                                    <div class="input">
-                                        <label>Số điện thoại: <span style="color:red;">*</span></label>
-                                        <input type="text" name="txtDienThoai" required onkeydown="return checkIt(event)" class="clsip">
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                                <!---row---->
-                                <div class="row">
-                                    <div class="input">
-                                        <label>Địa chỉ: <span style="color:red;">*</span></label>
-                                        <input type="text" name="txtDiaChi" required class="clsip" >
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                                <!---row---->
-                                <div class="row">
-                                    <div class="input">
-                                        <label>Email: <span style="color:red;">*</span></label>
-                                        <input type="text" name="txtEmail" onchange="return KiemTraEmail(this);" required class="clsip">
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                                <!---row---->
-                                <div class="row">
-                                    <div class="input">
-                                        <label>Nội dung: <span style="color:red;">*</span></label>
-                                        <textarea type="text" name="txtNoiDung" class="clsipa"></textarea>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                                <!---row---->
-                                <div class="row btnclass">
-                                    <div class="input ipmaxn ">
-                                        <input type="submit" class="btn-gui" name="frmSubmit" id="frmSubmit" value="Gửi đơn hàng">
-                                        <input type="reset" class="btn-gui" value="Nhập lại">
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                                <!---row---->
-                                <div class="clear"></div>
-                            </div>
                             </form>
                         </div>
                     </div>

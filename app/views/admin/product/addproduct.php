@@ -1,4 +1,4 @@
-<h3 style="text-align: center;">Thêm sản phẩm</h3>
+<h3 style="text-align: center; color: red; font-weight: bold;">Thêm sản phẩm</h3>
 <div class="col-md-12">
     <form action="<?php echo APP_URL?>product/insertProduct" method="post" enctype="multipart/form-data">
         <div class="form-group">
@@ -15,7 +15,7 @@
         </div>
         <div class="form-group">
             <label style="font-size: 25px;">Mô tả danh mục sản phẩm:</label>
-            <textarea name="desc_product" style="resize: none;" class="form-control" rows="5"></textarea>
+            <textarea id="editor" name="desc_product" style="resize: none;" class="form-control" rows="5"></textarea>
         </div>
         <div class="form-group">
             <label style="font-size: 25px;">Số lượng:</label>
@@ -42,6 +42,6 @@
                 <option value="1">Có</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-default btn-primary">Thêm</button>
+        <button type="submit" class="btn btn-default btn-primary"><i class="fa-solid fa-plus"></i> Thêm</button>
     </form>
 </div>

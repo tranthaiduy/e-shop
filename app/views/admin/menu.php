@@ -47,7 +47,6 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo APP_URL?>order/addorder">Thêm đơn hàng</a></li>
                             <li><a href="<?php echo APP_URL?>order">Danh sách đơn hàng</a></li>
                         </ul>
                     </li>

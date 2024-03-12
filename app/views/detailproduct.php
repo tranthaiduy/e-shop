@@ -5,32 +5,16 @@
    <div class="bg_in">
       <div class="wrapper_all_main">
          <div class="wrapper_all_main_right no-padding-left" style="width:100%;">
-            <!-- <div class="breadcrumbs">
-               <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-                  <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                     <a itemprop="item" href=".">
-                     <span itemprop="name">Trang chủ</span></a>
-                     <meta itemprop="position" content="1" />
-                  </li>
-                  <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                     <a itemprop="item" href="sanpham.php">
-                     <span itemprop="name">Sản phẩm</span></a>
-                     <meta itemprop="position" content="2" />
-                  </li>
-                  <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-                     <span itemprop="item">
-                     <strong itemprop="name">
-                     Iphone 6
-                     </strong>
-                     </span>
-                     <meta itemprop="position" content="3" />
-                  </li>
-               </ol>
-            </div> -->
+            
+            <form action="<?php echo APP_URL?>giohang/themgiohang" method="post">
+            <input type="hidden" value="<?php echo $val['id_product']?>" name="product_id">
+            <input type="hidden" value="<?php echo $val['title_product']?>" name="product_title">
+            <input type="hidden" value="<?php echo $val['image_product']?>" name="product_image">
+            <input type="hidden" value="<?php echo $val['price_product']?>" name="product_price">
+            <input type="hidden" value="1" name="product_quantity">
             <div class="content_page">
                <div class="content-right-items margin0">
                   <div class="title-pro-des-ct">
-                     
                      <h1><?php echo $name?></h1>
                   </div>
                   <div class="slider-galery ">
@@ -38,25 +22,13 @@
                         <div class="item">
                            <img src="<?php echo APP_URL?>public/uploads/product/<?php echo $val['image_product']?>" width="100%">
                         </div>
-                        <!-- <div class="item">
-                           <img src="" width="100%">
-                        </div>
-                        <div class="item">
-                           <img src="" width="100%">
-                        </div> -->
+                        
                      </div>
 
                      <div id="sync2" class="owl-carousel owl-theme">
                         <div class="item">
                            <img src="<?php echo APP_URL?>public/uploads/product/<?php echo $val['image_product']?>" width="100%">
                         </div>
-                        <!-- <div class="item">
-                           <img src="" width="100%">
-                        </div>
-                     
-                        <div class="item">
-                           <img src="" width="100%">
-                        </div> -->
                            
                      </div> 
                      
@@ -65,13 +37,7 @@
                      <div class="content-des-pro_in">
                         <div class="pro-des-sum">
                            <div class="price">
-                              <p class="code_skin" style="margin-bottom:10px">
-                                 <span>Mã hàng: <a href="chitietsp.php">CRW-W06</a> | Thương hiệu: <a href="">Comrack</a></span>
-                              </p>
-                              <div class="status_pro">
-                                 <span><b>Trạng thái:</b>  Còn hàng</span>
-                              </div>
-                              <div class="status_pro"><span><b>Xuất xứ:</b>  Việt Nam</span></div>
+                              
                            </div>
                            <div class="color_price">
                               <span class="title_price bg_green">Giá bán</span> <?php echo number_format($val['price_product'])?> <span>vnđ</span>.
@@ -97,12 +63,8 @@
                            <div class="clear"></div>
                         </div>
                         <div class="wp_a">
-                           <a onclick="return giohang(579);" class="view_duan">
-                           <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="text-mobile-buy">Mua hàng</span>
-                           </a>
-                           <a href="tel:090 66 99 038" class="view_duan">
-                           <i class="fa fa-phone" aria-hidden="true"></i> <span class="text-mobile-buy">Gọi ngay</span>
-                           </a>
+                           <input class="btn btn-success" style="box-shadow: none;" type="submit" name="addcart" value="Đặt hàng">
+                           
                            <div class="clear"></div>
                         </div>
                         <div class="clear"></div>
@@ -147,67 +109,19 @@
                   <div class="clear"></div>
                </div>
             </div>
+            </form>
          </div>
          <div class="wrapper_all_main_right">
-            <div class="tabs-animation">
-               <div class="bg_in">
-                  <div id="nav-anchor"></div>
-                  <nav class="nav-tabs">
-                     <ul>
-                        <li><a href="#productDetail"><i class="fa fa-info-circle" aria-hidden="true"></i> <span class="text-mobile">Chi tiết sản phẩm</span></a></li>
-                        <li><a href="#inforProduct"><i class="fa fa-file-text-o" aria-hidden="true"></i><span class="text-mobile"> Thông số kỹ thuật</span></a></li>
-                        <li><a href="#Comment"><i class="fa fa-comment-o" aria-hidden="true"></i><span class="text-mobile"> Bình luận</span></a></li>
-                     </ul>
-                     <div class="name-product">
-                        Iphone X
-                        <span class="" style="font-size:16px; color:red; padding-left:5px;">1,960,000 VNĐ</span>
-                     </div>
-                     <div class="ct btn-wp">
-                        <div class="wp_a">
-                           <a onclick="return giohang(371);" class="view_duan">
-                           <i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="text-mobile-buy">Mua hàng</span>
-                           </a>
-                           <a href="tel:090 66 99 038" class="view_duan">
-                           <i class="fa fa-phone" aria-hidden="true"></i> <span class="text-mobile-buy">Gọi ngay</span>
-                           </a>
-                           <div class="clear"></div>
-                        </div>
-                     </div>
-                  </nav>
-               </div>
-            </div>
+            
             <div class="product_detail_info">
-               <div class="module_pro_all" id="inforProduct">
-                  <div class="box-title">
-                     <div class="title-bar">
-                        <h3>Thông số kỹ thuật</h3>
-                     </div>
-                  </div>
-                  <div class="tab_content content_text_product content-module">
-                     <p>CRW - Wallmount:<br />
-                        - Cửa: 1 cánh trước Mica<br />
-                        - Tủ treo tường (Wall mount)<br />
-                        - -Màu sơn tĩnh&nbsp;<br />
-                        - Tủ có đánh dấu số U trên thanh tiêu chuẩn&nbsp;<br />
-                        - Logo COMRACK được dập nổi trên cánh trước của tủ<br />
-                        - Đáy và nóc có đột lỗ chờ đi dây<br />
-                        - Bảo hành 3 năm với tủ , 1 năm với phụ kiện&nbsp;
-                     </p>
-                  </div>
-               </div>
+               
             </div>
             <div class="clear"></div>
             
             <div class="clear"></div>
             <div class="dmsub">
                <div class="tags_products desktop">
-                  <div class="tab_link">
-                     <h3 class="title_tab_link">TAGS: </h3>
-                     <div class="content_tab_link"> 
-                        <a href="tag/">Iphone x</a>
-
-                     </div>
-                  </div>
+                  
                </div>
             </div>
             <div class="module_pro_all">
@@ -219,6 +133,12 @@
                <div class="pro_all_gird">
                   <div class="girds_all list_all_other_page ">
                      <?php foreach($related as $key => $val_related){?>
+                     <form action="<?php echo APP_URL?>giohang/themgiohang" method="post">
+                     <input type="hidden" value="<?php echo $val_related['id_product']?>" name="product_id">
+                     <input type="hidden" value="<?php echo $val_related['title_product']?>" name="product_title">
+                     <input type="hidden" value="<?php echo $val_related['image_product']?>" name="product_image">
+                     <input type="hidden" value="<?php echo $val_related['price_product']?>" name="product_price">
+                     <input type="hidden" value="1" name="product_quantity">
                      <div class="grids">
                         <div class="grids_in">
                            <div class="content">
@@ -238,19 +158,18 @@
                                     <h3><?php echo $val_related['title_product']?></h3>
                                  </a>
                               </div>
-                              <div class="add_card">
-                                 <a onclick="return giohang(579);">
-                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i> Đặt hàng
-                                 </a>
+                              <div>
+                                 <input class="btn btn-success" style="box-shadow: none;" type="submit" name="addcart" value="Đặt hàng">
                               </div>
                               <div class="price_old_new">
                                  <div class="price">
-                                    <span class="news_price"><?php echo number_format($val_related['price_product'])?>đ </span>
+                                    <span style="margin-left: 40px" class="news_price"><?php echo number_format($val_related['price_product'])?>đ </span>
                                  </div>
                               </div>
                            </div>
                         </div>
                      </div>
+                     </form>
                      <?php }?>
                      <div class="clear"></div>
                   </div>

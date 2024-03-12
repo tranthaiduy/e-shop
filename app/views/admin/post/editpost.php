@@ -1,4 +1,4 @@
-<h3 style="text-align: center;">Cập nhật bài viết</h3>
+<h3 style="text-align: center; color: red; font-weight: bold;">Cập nhật bài viết</h3>
 <div class="col-md-12">
     <?php
     foreach($postbyid as $key => $val){
@@ -15,7 +15,7 @@
         </div>
         <div class="form-group">
             <label style="font-size: 25px;">Nội dung bài viết:</label>
-            <textarea name="content_post" style="resize: none;" class="form-control" rows="5"><?php echo $val['content_post']?></textarea>
+            <textarea id="editor" name="content_post" style="resize: none;" class="form-control" rows="5"><?php echo $val['content_post']?></textarea>
         </div>
         <div class="form-group">
             <label style="font-size: 25px;">Danh mục sản phẩm:</label>
@@ -30,7 +30,7 @@
                 ?>
             </select>
         </div>
-        <button type="submit" class="btn btn-default btn-primary">Lưu</button>
+        <button type="submit" class="btn btn-default btn-primary"><i class="fa-solid fa-floppy-disk"></i> Cập nhật</button>
     </form>
     <?php 
     }

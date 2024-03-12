@@ -1,4 +1,4 @@
-<h3 style="text-align: center;">Cập nhật danh mục sản phẩm</h3>
+<h3 style="text-align: center; color: red; font-weight: bold;">Cập nhật danh mục sản phẩm</h3>
 <div class="col-md-12">
     <?php
     foreach($categorybyid as $key => $val){
@@ -11,9 +11,9 @@
         </div>
         <div class="form-group">
             <label style="font-size: 25px;">Mô tả danh mục:</label>
-            <textarea name="desc_category_product" style="resize: none;" class="form-control" rows="5"><?php echo $val['desc_category_product']?></textarea>
+            <textarea id="editor" name="desc_category_product" style="resize: none;" class="form-control" rows="5"><?php echo $val['desc_category_product']?></textarea>
         </div>
-        <button type="submit" class="btn btn-default btn-primary">Cập nhật</button>
+        <button type="submit" class="btn btn-default btn-primary"><i class="fa-solid fa-floppy-disk"></i> Cập nhật</button>
     </form>
     <?php
     }

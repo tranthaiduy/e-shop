@@ -1,4 +1,4 @@
-<h3 style="text-align: center;">Danh sách sản phẩm</h3>
+<h3 style="text-align: center; color: red; font-weight: bold;">Danh sách sản phẩm</h3>
 <div class="container" style="align-items: center">
     <table class="table table-striped table-hover" style="font-size: 18px; border: 1px">
         <thead class="thead-dark">
@@ -38,10 +38,10 @@
                 </td>
                 <td>
                     <a href="<?php echo APP_URL?>product/editproduct/<?php echo $val['id_product']?>">
-                        <button class="btn btn-warning">Sửa</button>
+                        <button class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i> Sửa</button>
                     </a>
                     <a href="<?php echo APP_URL?>product/deleteProduct/<?php echo $val['id_product']?>">
-                        <button onclick="return confirm('Bạn có chắc muốn xóa không?')" class="btn btn-danger">Xóa</button>
+                        <button onclick="return confirm('Bạn có chắc muốn xóa không?')" class="btn btn-danger"><i class="fa-solid fa-trash"></i> Xóa</button>
                     </a>
                 </td>
             </tr>

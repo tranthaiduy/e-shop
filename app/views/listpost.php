@@ -34,7 +34,7 @@
                             <li class="lists">
                                 <div class="img-list">
                                 <a href="<?php echo APP_URL?>tintuc/chitiettin/<?php echo $val['id_post']?>">
-                                    <img src="<?php echo APP_URL?>public/uploads/post/<?php echo $val['image_post']?>" alt="<?php echo $val['title_post']?>" class="img-list-in">
+                                    <img style="height: 150px; width: 100px;" src="<?php echo APP_URL?>public/uploads/post/<?php echo $val['image_post']?>" alt="<?php echo $val['title_post']?>" class="img-list-in">
                                 </a>
                                 </div>
                                 <div class="content-list">
@@ -45,7 +45,7 @@
                                             </h3>
                                         </div>
                                         <div class="content-list-in">
-                                            <p><span style="font-size:16px"><?php echo $val['content_post']?></span></p>
+                                            <p><span style="font-size:16px"><?php echo substr($val['content_post'],0,100)?>...</span></p>
                                         </div>
                                         <div class="xt"><a href="<?php echo APP_URL?>tintuc/chitiettin/<?php echo $val['id_post']?>">Xem thêm</a></div>
                                     </div>

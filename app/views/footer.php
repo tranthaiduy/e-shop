@@ -102,13 +102,7 @@
             <h4 class="tkw9999">&copy;  © Bản quyền thuộc về Webextrasite. Designed by <a href="http://webextrasite.com/" rel="dofollow" target="_blank">Thiet Ke Web</a> Bởi <a href="http://webextrasite.com/">Webextrasite.com</a></h4>
         </div>
     </footer>
-    <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show" id="coccoc-alo-phoneIcon">
-        <a href="tel:0923-032-992" title="Gọi ngay cho chúng tôi">
-            <div class="coccoc-alo-ph-circle"></div>
-            <div class="coccoc-alo-ph-circle-fill"></div>
-            <div class="coccoc-alo-ph-img-circle"></div>
-        </a>
-    </div>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script defer type="text/javascript" src="<?php echo APP_URL?>public/js/sweet-alert.js"></script>
     <script defer type="text/javascript" src="<?php echo APP_URL?>public/js/bootstrap.js"></script>
@@ -118,13 +112,13 @@
     <script defer type="text/javascript" src="<?php echo APP_URL?>public/js/script_ex.js"></script>
     <script defer type="text/javascript" src="<?php echo APP_URL?>public/js/script_menu.js"></script>
     <script src="<?php echo APP_URL?>public/js/cloudzoom.js"></script>
-        <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show" id="coccoc-alo-phoneIcon" >
+        <!-- <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show" id="coccoc-alo-phoneIcon" >
             <a href="tel:090909090" title="Gọi ngay cho chúng tôi">
                 <div class="coccoc-alo-ph-circle"></div>
                 <div class="coccoc-alo-ph-circle-fill"></div>
                 <div class="coccoc-alo-ph-img-circle"></div>
             </a>
-        </div>
+        </div> -->
     <link async rel="stylesheet" href="<?php echo APP_URL?>public/css/cssfooter.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     
