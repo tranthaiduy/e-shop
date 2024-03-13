@@ -28,7 +28,7 @@
     <meta name="geo.placename" content="Ho Chi Minh City" />
     <meta name="geo.position" content="10.823099;106.629664" />
     <meta name="ICBM" content="10.823099, 106.629664" />
-    <link rel="icon" type="image/png" href="template/Default/img/favicon.png">
+    <link rel="icon" type="" href="<?php echo APP_URL?>public/image/icon.jpg">
     <!--tkw-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="<?php echo APP_URL?>public/css/owl.carousel.min.css">
